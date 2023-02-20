@@ -1,0 +1,18 @@
+{
+
+    "AUTHOR": "oskhar",
+
+    "COMPANY": "UIN Jakarta",
+
+    "LOGO": "assets/icons/myLogo.ico",
+
+    "DATABASE_CONNECT": {
+        "HOST": "localhost",
+        "USER": "root",
+        "PASS": "tesdoang",
+        "DB_NAME": "oskhar_official"
+    },
+
+    "IN_DEVELOPMENT": true
+
+}
