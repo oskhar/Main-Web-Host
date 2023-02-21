@@ -9,18 +9,18 @@ class Home_Controller extends Controller {
     public $dataPage;
 
     // Constructor
-    public function __construct ($dataConfig, $nameFile) {
+    public function __construct ($databaseConfig, $nameFile) {
 
         try {
-            parent::__construct($dataConfig);
-            $this->dataPage = $this->modelPages->where("page='$nameFile'");
+            parent::__construct($databaseConfig);
+            $this->dataPage = $this->modelPages->select()->where("page='$nameFile'")->getColumn();
 
             $this->pageTitle = ucfirst($nameFile);
-            $this->pageDecs = $this->dataPage->select("deskripsi")->get();
-            $this->pageImage = $this->dataPage->select("gambar")->get();
-            $this->pageKeyword = $this->dataPage->select("keyword")->get();
+            $this->pageDecs = $this->dataPage["deskripsi"];
+            $this->pageImage = $this->dataPage["gambar"];
+            $this->pageKeyword = $this->dataPage["keyword"];
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo ("home_controller error:" . $er->getMessage());
 
         }

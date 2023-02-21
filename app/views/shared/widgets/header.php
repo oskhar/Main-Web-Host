@@ -17,4 +17,4 @@ if (!isset($controller))
 <meta name="language" content="Indonesia">
 <meta name="keywords" content="<?= $controller->pageKeyword ?>">
 
-<title><?= $controller->pageTitle ?></title>
+<title><?= $controller->pageDecs ?></title>

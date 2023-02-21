@@ -14,21 +14,15 @@ class Controller {
     public $pageKeyword;
 
     // Constructor
-    public function __construct ($dataConfig) {
+    public function __construct ($databaseConfig) {
 
         try {
-            $this->modelPages = new Pages_Model($dataConfig);
+            $this->modelPages = new Pages_Model($databaseConfig);
 
         } catch (Exception $er) {
             echo (" (controller_class.php) Tidak bisa mengakses MODEL: " . $er->getMessage());
 
         }
-
-    }
-
-    // Method
-    public function addComponent ($nameComponent) {
-        include($this->pathComponent . $nameComponent);
 
     }
     

@@ -144,6 +144,26 @@ class Model {
         
     }
 
+    // Method get
+    public function getColumn () {
+
+        try {
+            $this->sql = $this->select . " ";
+            $this->sql .= $this->join  . " ";
+            $this->sql .= $this->where . " ";
+            $this->sql .= $this->order . " ";
+            $this->sql .= $this->limit;
+
+            $this->result = mysqli_query($this->conn, $this->sql);            
+            return mysqli_fetch_array($this->result);
+            
+        } catch (Exception $er) {
+            echo (" (model_class.php) GET error, query ($this->sql): " . $er->getMessage());
+
+        }
+        
+    }
+
     // Method setData
     public function set ($dataIn) {
 
