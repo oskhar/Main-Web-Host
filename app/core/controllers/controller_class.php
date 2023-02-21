@@ -19,8 +19,8 @@ class Controller {
         try {
             $this->modelPages = new Pages_Model($dataConfig);
 
-        } catch (\Throwable $th) {
-            echo ("Tidak bisa mengambil tabel dari database: " . $th);
+        } catch (Exception $er) {
+            echo (" (controller_class.php) Tidak bisa mengakses MODEL: " . $er->getMessage());
 
         }
 

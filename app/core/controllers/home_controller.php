@@ -20,8 +20,8 @@ class Home_Controller extends Controller {
             $this->pageImage = $this->dataPage->select("gambar")->get();
             $this->pageKeyword = $this->dataPage->select("keyword")->get();
 
-        } catch (\Throwable $th) {
-            echo ("Controller error:" . $th);
+        } catch (Exception $er) {
+            echo ("home_controller error:" . $er->getMessage());
 
         }
 
