@@ -1,0 +1,45 @@
+TABLE pages {
+    
+    page
+        <string[100]>
+        (nama dari page pada website)
+    
+    deskripsi
+        <text>
+        (penjelasan dari setiap page)
+    
+    gambar
+        <string[300]>
+        (gambar yang akan ditampilkan pada link)
+    
+    keyword
+        <word>
+        (nama dari page pada website)
+
+}
+
+TABLE project {
+
+    nama
+        <string[100]>
+        (nama project)
+    
+    deskripsi
+        <text>
+        (penjelasan singkat tentang project)
+    
+    gambar
+        <string[300]>
+        (beberapa gambar tampilan project jadi)
+    
+    tech
+        <string[200]>
+        (beberapa nama teknologi yang digunakan dalam membuat project)
+    
+    link
+        <string[100]>
+        (link menuju project)
+
+    
+
+}

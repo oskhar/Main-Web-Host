@@ -11,6 +11,6 @@ include("app/core/controllers/". $nameFile ."_controller.php");
         <?php include($widgets."header.php"); ?>
     </head>
     <body>
-        <h1>ini home</h1>
+        <h1>project</h1>
     </body>
 </html>

@@ -6,7 +6,6 @@ include("app/core/models/pages_model.php");
 class Controller {
 
     // Atribute
-    private $pathComponent = "app/views/shared/widgets/";
     public $modelPages;
     public $pageTitle;
     public $pageDecs;
