@@ -39,7 +39,7 @@ class Model {
             $this->select = "SELECT " . $tmp . " FROM " . $this->table;
             return $this;
             
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) Proses select bermasalah: " . $er->getMessage());
 
         }
@@ -67,7 +67,7 @@ class Model {
             return $this;
 
             
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) Proses JOIN bermasalah: " . $er->getMessage());
 
         }
@@ -90,7 +90,7 @@ class Model {
                 $this->where = "WHERE " . $rule;
                 return $this;
                     
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) Proses WHERE bemasalah: " . $er->getMessage());
 
         }
@@ -114,7 +114,7 @@ class Model {
             
             return $this;
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) Proses LIMIT bermasalah:" . $er->getMessage());
 
         }
@@ -137,7 +137,7 @@ class Model {
             
             return $this->data;
             
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) GET error, query ($this->sql): " . $er->getMessage());
 
         }
@@ -157,7 +157,7 @@ class Model {
             $this->result = mysqli_query($this->conn, $this->sql);            
             return mysqli_fetch_array($this->result);
             
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) GET error, query ($this->sql): " . $er->getMessage());
 
         }
@@ -171,7 +171,7 @@ class Model {
             $this->setData = " SET " . implode($dataIn, ", ");
             return $this;
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) Proses set data bermasalah: " . $er->getMessage());
 
         }
@@ -185,7 +185,7 @@ class Model {
             $this->where = " WHERE $key=$val";
             return $this;
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) Proses find bermasalah: " . $er->getMessage());
         }
 
@@ -198,7 +198,7 @@ class Model {
             $this->sql = "INSERT INTO " . $this->table . $this->setData;
             mysqli_query($this->conn, $this->sql);
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) INSERT error, query ($this->sql): " . $er->getMessage());
 
         }
@@ -212,7 +212,7 @@ class Model {
             $this->sql = "UPDATE " . $this->table . $this->setData . $this->where;
             mysqli_query($this->conn, $this->sql);
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) Tidak bisa menjalankan query ($this->sql): " . $er->getMessage());
 
         }
@@ -226,7 +226,7 @@ class Model {
             $this->sql = "DELETE FROM " . $this->table . $this->where;
             mysqli_query($this->conn, $this->sql);
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (model_class.php) DELETE error, query ($this->sql): " . $er->getMessage());
         }
 

@@ -19,7 +19,7 @@ class Controller {
         try {
             $this->modelPages = new Pages_Model($databaseConfig);
 
-        } catch (Exception $er) {
+        } catch (\Throwable $er) {
             echo (" (controller_class.php) Tidak bisa mengakses MODEL: " . $er->getMessage());
 
         }
