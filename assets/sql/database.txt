@@ -39,7 +39,18 @@ TABLE project {
     link
         <string[100]>
         (link menuju project)
+        NULL SUPORT
 
-    
+    komen
+        <text>
+        (pendapat para viewer terkait project)
+
+    view
+        <number>
+        (jumlah view pada project)
+
+    like
+        <number>
+        (jumlah like pada project)
 
 }
