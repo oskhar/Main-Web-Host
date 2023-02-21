@@ -3,7 +3,7 @@
 include("app/core/controllers/controller_class.php");
 
 // Class
-class Home_Controller extends Controller {
+class Project_Controller extends Controller {
 
     // Atribute
     public $dataPage;
@@ -27,6 +27,6 @@ class Home_Controller extends Controller {
 
     }
 
-} $controller = new Home_Controller($databaseConfig, $nameFile);
+} $controller = new Project_Controller($databaseConfig, $nameFile);
 
 ?>
