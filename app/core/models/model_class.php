@@ -21,13 +21,9 @@ class Model {
     public function __construct ($databaseConfig) {
 
         $this->conn = null;
-        try {
-            $this->conn = mysqli_connect($databaseConfig['host'], $databaseConfig['user'], $databaseConfig['pass'], $databaseConfig['db_name']);
-
-        } catch (\Throwable $th) {
-            die("Tidak bisa terkoneksi ke database: " . $th);
-
-        } 
+        $this->conn = mysqli_connect($databaseConfig['HOST'], $databaseConfig['USER'], $databaseConfig['PASS'], $databaseConfig['DB_NAME']);
+        if($this->conn === false)
+            die(" (model_class.php) Tidak bisa KONEKSI ke database: " . mysqli_connect_error());
 
     }
 
@@ -40,11 +36,11 @@ class Model {
             else
                 $tmp = "*";
             
-            $this->select .= "SELECT " . $tmp . " FROM " . $this->table;
+            $this->select = "SELECT " . $tmp . " FROM " . $this->table;
             return $this;
             
-        } catch (\Throwable $th) {
-            die ("Proses select bermasalah: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) Proses select bermasalah: " . $er->getMessage());
 
         }
 
@@ -57,13 +53,13 @@ class Model {
             if (is_array($table)) {
                 for ($i = 0; $i < sizeof($table); $i++) {
 
-                    $this->join .= " $join $table[$i] ";
+                    $this->join = " $join $table[$i] ";
                     $this->join .= " ON " . $table[$i] . "." . $param[$i][0] . "=" . $table[$i] . "." . $param[$i][1];
 
                 }
 
             } else {
-                $this->join .= " $join $table ";
+                $this->join = " $join $table ";
                 $this->join .= " ON " . $table . "." . $param;
 
             }
@@ -71,8 +67,8 @@ class Model {
             return $this;
 
             
-        } catch (\Throwable $th) {
-            die ("Proses join bermasalah: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) Proses JOIN bermasalah: " . $er->getMessage());
 
         }
 
@@ -87,15 +83,15 @@ class Model {
                 foreach ($rule as $rl)
                     array_Push($tmp, $rl);
                 
-                $this->where .= "WHERE" . implode($tmp, " AND ");
+                $this->where = "WHERE " . implode($tmp, " AND ");
                 return $this;
             }
             else
-                $this->where .+ "WHERE" . $rule;
+                $this->where = "WHERE " . $rule;
                 return $this;
                     
-        } catch (\Throwable $th) {
-            die ("Proses where bemasalah: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) Proses WHERE bemasalah: " . $er->getMessage());
 
         }
 
@@ -103,7 +99,7 @@ class Model {
 
     // Method order
     public function order ($column, $sort = "ASC") {
-        $this->order .= "ORDER BY $column $sort";
+        $this->order = "ORDER BY $column $sort";
         return $this;
 
     }
@@ -112,14 +108,14 @@ class Model {
     public function limit ($a, $b = 0) {
 
         try {
-            $this->limit .= "LIMIT " . $a;
+            $this->limit = "LIMIT " . $a;
             if (!empty($a))
                 $this->limit .= $b;
             
             return $this;
 
-        } catch (\Throwable $th) {
-            die ("Proses limit bermasalah: $th");
+        } catch (Exception $er) {
+            echo (" (model_class.php) Proses LIMIT bermasalah:" . $er->getMessage());
 
         }
 
@@ -129,8 +125,8 @@ class Model {
     public function get () {
 
         try {
-            $this->sql .= $this->select . " ";
-            $this->sql .= $this->join . " ";
+            $this->sql = $this->select . " ";
+            $this->sql .= $this->join  . " ";
             $this->sql .= $this->where . " ";
             $this->sql .= $this->order . " ";
             $this->sql .= $this->limit;
@@ -141,8 +137,8 @@ class Model {
             
             return $this->data;
             
-        } catch (\Throwable $th) {
-            die ("Tidak bisa mengambil data dari table: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) GET error, query ($this->sql): " . $er->getMessage());
 
         }
         
@@ -152,11 +148,11 @@ class Model {
     public function set ($dataIn) {
 
         try {
-            $this->setData .= " SET " . implode($dataIn, ", ");
+            $this->setData = " SET " . implode($dataIn, ", ");
             return $this;
 
-        } catch (\Throwable $th) {
-            die ("Proses set data bermasalah: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) Proses set data bermasalah: " . $er->getMessage());
 
         }
 
@@ -166,11 +162,11 @@ class Model {
     public function find ($key, $val) {
 
         try {
-            $this->where .= " WHERE $key=$val";
+            $this->where = " WHERE $key=$val";
             return $this;
 
-        } catch (\Throwable $th) {
-            die ("Proses find bermasalah: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) Proses find bermasalah: " . $er->getMessage());
         }
 
     }
@@ -182,8 +178,8 @@ class Model {
             $this->sql = "INSERT INTO " . $this->table . $this->setData;
             mysqli_query($this->conn, $this->sql);
 
-        } catch (\Throwable $th) {
-            die ("Tidak bisa meng-Insert data dari table: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) INSERT error, query ($this->sql): " . $er->getMessage());
 
         }
 
@@ -193,11 +189,11 @@ class Model {
     public function update () {
 
         try {
-            $this->sql .= "UPDATE " . $this->table . $this->setData . $this->where;
+            $this->sql = "UPDATE " . $this->table . $this->setData . $this->where;
             mysqli_query($this->conn, $this->sql);
 
-        } catch (\Throwable $th) {
-            die ("Tidak bisa mengubah data dari table: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) Tidak bisa menjalankan query ($this->sql): " . $er->getMessage());
 
         }
 
@@ -207,11 +203,11 @@ class Model {
     public function delete () {
 
         try {
-            $this->sql .= "DELETE FROM " . $this->table . $this->where;
+            $this->sql = "DELETE FROM " . $this->table . $this->where;
             mysqli_query($this->conn, $this->sql);
 
-        } catch (\Throwable $th) {
-            die ("Tidak bisa menghapus data dari table: " . $th);
+        } catch (Exception $er) {
+            echo (" (model_class.php) DELETE error, query ($this->sql): " . $er->getMessage());
         }
 
     }

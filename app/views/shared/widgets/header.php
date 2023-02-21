@@ -1,10 +1,7 @@
-<?/* 
-    Requirement
-    - deskrpsi web
-    - gambar yang tampil dalam link
-    - judul web
-    - keyword untuk pencaharian web
-*/?>
+<?php
+if (!isset($controller))
+    die ( " (header.php) controller tidak terdeteksi" )
+?>
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

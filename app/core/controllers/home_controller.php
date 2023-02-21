@@ -21,11 +21,12 @@ class Home_Controller extends Controller {
             $this->pageKeyword = $this->dataPage->select("keyword")->get();
 
         } catch (\Throwable $th) {
-            die ("Controller error:" . $th);
+            echo ("Controller error:" . $th);
 
         }
 
     }
 
-}
+} $controller = new Home_Controller($databaseConfig, $nameFile);
+
 ?>

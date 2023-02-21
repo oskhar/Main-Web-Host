@@ -20,7 +20,7 @@ class Controller {
             $this->modelPages = new Pages_Model($dataConfig);
 
         } catch (\Throwable $th) {
-            die ("Tidak bisa mengambil tabel dari database: " . $th);
+            echo ("Tidak bisa mengambil tabel dari database: " . $th);
 
         }
 
