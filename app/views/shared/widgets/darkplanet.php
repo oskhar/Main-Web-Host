@@ -3,12 +3,13 @@
 <script src="<?= $js ?>darkplanet.js"></script>
 
 <!-- Component -->
-<div id="area_darkplanet">
-    <div id="darkplanet"></div>
-    <div id="isiDarkplanet"></div>
-    <div id="sabukAsteroid">
+<div id="darkplanet">
+    <div id="planet"></div>
+    <div id="inside"></div>
+    <div id="sabuk_asteroid">
         <?php for ($i = 0; $i < 8; $i++): ?>
             <div id="asteroid<?= $i ?>"></div>
         <?php endfor; ?>
     </div>
+    <div id="light"></div>
 </div>

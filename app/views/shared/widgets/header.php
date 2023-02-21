@@ -1,6 +1,8 @@
 <?php
+
 if (!isset($controller))
     die ( " (header.php) controller tidak terdeteksi" )
+
 ?>
 
 <meta charset="UTF-8">

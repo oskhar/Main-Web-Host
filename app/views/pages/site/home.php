@@ -12,7 +12,7 @@ include("app/core/controllers/". $nameFile ."_controller.php");
     </head>
     <body>
         <section>
-            
+            <?php include($widgets."darkplanet.php") ?>
         </section>
         <h1>ini home</h1>
     </body>
