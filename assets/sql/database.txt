@@ -45,11 +45,11 @@ TABLE project {
         <text>
         (pendapat para viewer terkait project)
 
-    view
+    lihat
         <number>
         (jumlah view pada project)
 
-    like
+    suka
         <number>
         (jumlah like pada project)
 
