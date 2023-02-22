@@ -1,5 +1,5 @@
+<!-- Requirement -->
 <?php
-
 try {
     $listBorder = [
         "border: 3px solid white; border-top: 3px solid transparent; border-bottom: 3px solid transparent; border-right: 3px solid transparent;",
@@ -20,9 +20,7 @@ try {
 } catch (\Throwable $er) {
     echo (" (darkplanet.php) persiapan data error: " . $er);
 
-}
-
-?>
+} ?>
 
 <!-- Library -->
 <link rel="stylesheet" href="<?= $css ?>darkplanet.css">
