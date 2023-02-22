@@ -1,6 +1,6 @@
 <!-- Library -->
-<link rel="stylesheet" href="<?= $css ?>darkplanet.css">
-<script src="<?= $js ?>darkplanet.js"></script>
+<link rel="stylesheet" href="<?= $css ?>navbar.css">
+<script src="<?= $js ?>navbar.js"></script>
 
 <!-- Component -->
 <div id="navbar">

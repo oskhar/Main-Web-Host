@@ -11,7 +11,9 @@ include("app/core/controllers/". $nameFile ."_controller.php");
         <?php include($widgets."header.php"); ?>
     </head>
     <body>
-        <h1><?= $js ?></h1>
+        <nav>
+            <?php include($widgets."navbar.php") ?>
+        </nav>
         <section>
             <?php include($widgets."darkplanet.php") ?>
         </section>
