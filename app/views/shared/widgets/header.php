@@ -19,4 +19,6 @@ if (!isset($controller))
 <meta name="language" content="Indonesia">
 <meta name="keywords" content="<?= $controller->pageKeyword ?>">
 
+<link rel="stylesheet" href="<?= $css ?><?= $nameFile ?>.css">
+
 <title><?= $controller->pageTitle ?></title>

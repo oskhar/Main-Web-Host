@@ -1,22 +1,27 @@
-#darkplanet #planet, #darkplanet #isiSaturn{
-	top: 140px;
+#darkplanet {
+    position: absolute;
+	height: 300px;
+	width: 300px;
+}
+#darkplanet #planet, #darkplanet #inside{
+	top: 60px;
 	height: 200px;
 	width: 200px;
 	position: absolute;
-	left: 0;
+	left: 60px;
 	right: 650px;
 	margin: auto;
-	background:  #040d21;
+	background:  #0d1116;
 	border-radius: 50%;
 	z-index: 2;
 }
 #darkplanet #inside{
-	background: linear-gradient(20deg, transparent 55%, #040d21 45%);
+	background: linear-gradient(20deg, transparent 55%, #0d1116 45%);
 	z-index: 4;
 }
 #darkplanet #sabuk_asteroid{
-	top: 80px;
-	left: 0;
+	top: 0px;
+	left: 0px;
 	right: 650px;
 	margin: auto;
 	animation: darkplanet_animasi 12s linear infinite;
@@ -26,29 +31,29 @@
 	height: 300px;
 	z-index: 3;
 }
-#darkplanet #sabuk_asteroid, #darkplanet #sabuk_asteroid div {
+#darkplanet #sabuk_asteroid,
+#darkplanet #sabuk_asteroid div {
 	position: absolute;
 	background-color: transparent;
 	transform-style: preserve-3d;
 	border-radius:50%;
 }
-
-@KeyFrames darkplanet_animasi{
-	0%{ transform: rotateX(-75deg) rotateY(-20deg) rotateZ(0deg); }
-	100%{ transform: rotateX(-75deg) rotateY(-20deg) rotateZ(360deg); }
-}
-@KeyFrames darkplanet_asteroid{
-	to{ transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg); }
-}
-
-#light{
+#darkplanet #light{
 	transform: perspective(8px) rotateX(1deg) rotateZ(-30deg);
 	background: linear-gradient(to bottom, rgb(255,255,255,0.6), rgb(255,255,255,0.4), rgb(255,255,255,0.2), rgb(255,255,255,0.1), transparent);
 	position: absolute;
 	width: 500px;
 	height: 600px;
-	left: -120px;
-	top: -180px;
+	left: -340px;
+	top: -280px;
 	opacity: 0.9;
 	z-index: 1;
+}
+
+@keyframes darkplanet_animasi{
+	0%{ transform: rotateX(-75deg) rotateY(-20deg) rotateZ(0deg); }
+	100%{ transform: rotateX(-75deg) rotateY(-20deg) rotateZ(360deg); }
+}
+@keyframes darkplanet_asteroid{
+	to{ transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg); }
 }
