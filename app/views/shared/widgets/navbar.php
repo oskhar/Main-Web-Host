@@ -5,9 +5,9 @@
 <!-- Component -->
 <div id="navbar">
     <div id="option">
-        <button>Home</button>
-        <button>Contrib</button>
-        <button>Project</button>
+        <button id="menu1">Home</button>
+        <button id="menu2">Contrib</button>
+        <button id="menu3">Project</button>
     </div>
     <button id="buka_navbar">
         <div></div>
