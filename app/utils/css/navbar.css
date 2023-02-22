@@ -1,6 +1,6 @@
 #navbar {
     position: absolute;
-    width: 81vmin;
+    width: 80vmin;
     height: 60px;
     left: 0;
     right: 0;
@@ -13,11 +13,20 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: calc(81vmin - 10px);
+    width: calc(80vmin - 10px);
     height: 60px;
     background: rgba(200, 200, 255, 0.1);
     border: 5px solid rgba(200, 200, 255, 0.2);
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+#navbar #option button {
+    border: none;
+    background: transparent;
+    font-family: sans-serif;
+    font-size: large;
+    color: rgba(200, 200, 255, 0.7);
 }
 #navbar #buka_navbar {
     position: absolute;

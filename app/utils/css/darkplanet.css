@@ -40,7 +40,7 @@
 }
 #darkplanet #light{
 	transform: perspective(8px) rotateX(1deg) rotateZ(-30deg);
-	background: linear-gradient(to bottom, rgb(255,255,255,0.6), rgb(255,255,255,0.4), rgb(255,255,255,0.2), rgb(255,255,255,0.1), transparent);
+	background: linear-gradient(to bottom, rgb(200, 200, 255,0.6), rgb(200, 200, 255,0.4), rgb(200, 200, 255,0.2), rgb(200, 200, 255,0.1), transparent);
 	position: absolute;
 	width: 500px;
 	height: 600px;
