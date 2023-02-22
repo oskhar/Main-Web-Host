@@ -7,7 +7,7 @@ $databaseConfig = $dataConfig['DATABASE_CONNECT'];
 
 $widgets = "app/views/shared/widgets/";
 $css = "app/utils/css/";
-$css = "app/utils/js/";
+$js = "app/utils/js/";
 
 // Alokasi ke halaman yang dituju
 $nameFile = $_GET["page"];

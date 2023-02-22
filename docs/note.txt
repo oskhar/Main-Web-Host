@@ -1,1 +1,4 @@
 menyesuaikan animasi saat pidah halaman
+membuat effek berpindah univers
+green #38dfa7
+dark #0d1116
