@@ -22,3 +22,4 @@ if (!isset($controller))
 <link rel="stylesheet" href="<?= $css ?><?= $nameFile ?>.css">
 
 <title><?= $controller->pageTitle ?></title>
+<?php include($widgets."loadingpage.php") ?>
