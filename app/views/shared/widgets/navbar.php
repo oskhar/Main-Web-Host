@@ -1,6 +1,8 @@
 <div id="navbar">
     <div id="option">
-        button#home
+        <button id="home"></button>
+        <button id="contrib"></button>
+        <button id="project"></button>
     </div>
-    <button></button>
+    <button id="buka_navbar"></button>
 </div>
