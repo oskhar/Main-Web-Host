@@ -456,6 +456,7 @@ var arrayAnimasi = [`
 
 
 
+
                  :.                                                          .:                 
                .Y@&!                                                        !&@Y.               
               .G@@@@?                                                      ?@@@@G.              
@@ -494,6 +495,7 @@ var arrayAnimasi = [`
                                            .JG#@@BY:                                            
                                                ..                                               
 `, `
+
 
 
 
@@ -628,6 +630,7 @@ var arrayAnimasi = [`
 
 
 
+
                                                        ...                                      
                                                        .^!.                                     
                   .7~                                  ^!.                 ~7.                  
@@ -668,6 +671,7 @@ var arrayAnimasi = [`
                                            .B@@@@@#^                                            
                                             .:~?J^.                                             
 `, `
+
 
 
 
@@ -726,6 +730,7 @@ var arrayAnimasi = [`
                                            .B@@@@@#^                                            
                                             .:~?J^.                                             
 `, `
+
 
 
                                             ......::.                                           
@@ -959,8 +964,7 @@ var arrayAnimasi = [`
 
 var loadingpage_pre = document.getElementById("loadingpage_pre");
 var i = 7;
-var vektor = [0, 0, 0, 1, 2, 0, 3, 0, 0, 4, 5, 0, 0, 6, 7, 8, 9, 10, 10, 10, 10, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 14, 15, 15, 16];
-console.log(arrayAnimasi.length);
+var vektor = [0, 1, 2, 0, 3, 0, 4, 5, 0, 4, 5, 0, 0, 6, 7, 8, 9, 10, 10, 10, 10, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 14, 15, 15, 16];
 window.animasi = function () {
     loadingpage_pre.innerHTML = arrayAnimasi[vektor[i]];
     i = i == vektor.length-1 ? 0 : i+1;
@@ -968,7 +972,7 @@ window.animasi = function () {
 var run = setInterval(animasi, 150);
 
 // Hapus loading
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", function() {
   clearInterval(run);
-  document.getElementById("loadingpage").parentNode.removeChild(document.getElementById("loadingpage"));
+  document.getElementById("loadingpage").remove();
 });

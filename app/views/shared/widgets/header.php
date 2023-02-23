@@ -1,7 +1,9 @@
 <?php
 
+// Mengakses controller
+include("app/core/controllers/". $nameFile ."_controller.php");
 if (!isset($controller))
-    die ( " (header.php) controller tidak terdeteksi" )
+    die ( " (header.php) controller tidak terdeteksi" );
 
 ?>
 

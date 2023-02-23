@@ -1,10 +1,3 @@
-<?php
-
-// Mengakses controller
-include("app/core/controllers/". $nameFile ."_controller.php");
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

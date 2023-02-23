@@ -5,7 +5,7 @@
     </center>
     
 
-    <!-- Library -->
+    <!-- JS -->
     <script src="<?= $js ?>loadingpage.js"></script>
 
 </div>
