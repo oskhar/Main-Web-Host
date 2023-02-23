@@ -7,7 +7,7 @@
     margin: auto;
     z-index: 5;
 }
-#navbar #option {
+#navbar .option {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,19 +21,19 @@
     display: grid;
     grid-template-columns: auto auto auto;
 }
-nav #navbar .opt1 {
+#navbar #opt1 {
     width: 60px;
     border-radius: 50%;
     animation: navbar_option 800ms 400ms ease-in-out forwards;
     animation-direction: normal;
 }
-nav #navbar .opt2 {
+#navbar #opt2 {
     width: calc(70vmin - 10px);
     border-radius: 20px;
     animation: navbar_option 800ms 400ms ease-in-out forwards;
     animation-direction: reverse;
 }
-#navbar #option button {
+#navbar .option button {
     border: none;
     background: transparent;
     font-family: sans-serif;
@@ -41,19 +41,19 @@ nav #navbar .opt2 {
     opacity: 0;
     color: rgba(200, 200, 255, 0.7);
 }
-#navbar #option .b1 {
+#navbar #but1 {
     font-size: smaller;
     opacity: 0;
     animation: navbar_font 400ms 1200ms ease-in-out forwards;
     animation-direction: normal;
 }
-#navbar #option .b2 {
+#navbar #but2 {
     font-size: larger;
     opacity: 1;
     animation: navbar_font 400ms ease-in-out forwards;
     animation-direction: reverse;
 }
-#navbar #buka_navbar {
+#navbar .buka_navbar {
     position: absolute;
     left: 0;
     right: 0;
@@ -65,7 +65,7 @@ nav #navbar .opt2 {
     border: none;
     border-radius: 50%;
 }
-nav #navbar .nav1 {
+#navbar #nav1 {
     top: 0;
     width: 70px;
     height: 70px;
@@ -73,7 +73,7 @@ nav #navbar .nav1 {
     animation: navbar_button 400ms ease-in-out forwards;
     animation-direction: normal;
 }
-nav #navbar .nav2 {
+#navbar #nav2 {
     top: 100px;
     width: 40px;
     height: 40px;
@@ -109,5 +109,6 @@ nav #navbar .nav2 {
         font-size: smaller;
     } 100% {
         opacity: 1;
-        font-size: large;}
+        font-size: large;
+    }
 }

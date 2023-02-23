@@ -3,12 +3,12 @@
 
 <!-- Component -->
 <div id="navbar">
-    <div id="option">
+    <div class="option">
         <button>Home</button>
         <button>Contrib</button>
         <button>Project</button>
     </div>
-    <button id="buka_navbar" onclick="click_buka_navbar()">
+    <button class="buka_navbar" onclick="click_buka_navbar()">
         <div></div>
         <div></div>
     </button>
