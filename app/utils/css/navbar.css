@@ -67,6 +67,7 @@
     margin: auto;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
 }
 #navbar #nav1 {
     top: 0;

@@ -9,7 +9,7 @@
         <button>Project</button>
         <button>Chat</button>
     </div>
-    <button class="buka_navbar" onclick="click_buka_navbar()">
+    <button class="buka_navbar" onclick="click_buka_navbar()" title="Click tombol untuk membuka Navbar">
         <div></div>
         <div></div>
     </button>
