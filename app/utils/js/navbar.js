@@ -17,3 +17,4 @@ window.click_buka_navbar = function () {
     navbar_click = navbar_click == 1 ? 2 : 1;
 
 }
+console.log("terbarukan navbar.js");

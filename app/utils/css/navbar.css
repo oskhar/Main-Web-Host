@@ -83,7 +83,7 @@
     animation-direction: reverse;
 }
 #navbar .buka_navbar div {
-    height: 80%;
+    height: 70%;
     width: 16%;
     position: absolute;
     top: -10%;
@@ -112,16 +112,16 @@
 
 }
 #navbar #act02 {
-    top: 10%;
+    top: 15%;
     left: 42%;
     transform: rotate(315deg);
     animation: act0 400ms 1200ms ease-in-out forwards;
     animation-direction: reverse;
 }
 #navbar #act12 {
-    top: 10%;
+    top: 15%;
     right: 42%;
-    transform: rotate(315deg);
+    transform: rotate(-315deg);
     animation: act1 400ms 1200ms ease-in-out forwards;
     animation-direction: reverse;
 
@@ -163,7 +163,7 @@
         left: 20%;
         transform: rotate(0deg);
     } to {
-        top: 10%;
+        top: 15%;
         left: 42%;
         transform: rotate(315deg);
     }
@@ -174,7 +174,7 @@
         right: 20%;
         transform: rotate(0deg);
     } to {
-        top: 10%;
+        top: 15%;
         right: 42%;
         transform: rotate(-315deg);
     }
