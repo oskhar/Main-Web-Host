@@ -1,11 +1,11 @@
 #navbar {
     position: absolute;
-    width: 30vw;
-    height: 60px;
+    width: calc(30vw + 10vmin);
+    height: 8.5vh;
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 8%;
+    bottom: 9%;
     z-index: 8;
 }
 #navbar .option {
@@ -14,8 +14,8 @@
     left: 0;
     right: 0;
     margin: auto;
-    height: 60px;
-    width: 60px;
+    height: 100%;
+    width: 8.5vh;
     border-radius: 50%;
     background: transparent;
     backdrop-filter: blur(15px);
@@ -24,7 +24,7 @@
     grid-template-columns: auto auto auto auto;
 }
 #navbar #opt1 {
-    width: 60px;
+    width: 8.5vh;
     border-radius: 50%;
     animation: navbar_option 800ms 400ms ease-in-out forwards;
     animation-direction: normal;
@@ -39,9 +39,11 @@
     border: none;
     background: transparent;
     font-family: sans-serif;
+    font-weight: bold;
     font-size: smaller;
     opacity: 0;
     color: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 #navbar #but1 {
     font-size: smaller;
@@ -50,7 +52,7 @@
     animation-direction: normal;
 }
 #navbar #but2 {
-    font-size: larger;
+    font-size: calc(0.8vw + 0.7vmin);
     opacity: 1;
     animation: navbar_font 400ms ease-in-out forwards;
     animation-direction: reverse;
@@ -59,9 +61,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
-    width: 70px;
-    height: 70px;
+    top: 2px;
+    width: 8.5vh;
+    height: 8.5vh;
     background: linear-gradient(30deg, #0c1824, #00335e);
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     margin: auto;
@@ -70,17 +72,17 @@
     cursor: pointer;
 }
 #navbar #nav1 {
-    top: 0;
-    width: 70px;
-    height: 70px;
+    top: 2px;
+    width: 8.5vh;
+    height: 8.5vh;
     background: linear-gradient(30deg, #0c1824, #00335e);
     animation: navbar_button 400ms ease-in-out forwards;
     animation-direction: normal;
 }
 #navbar #nav2 {
-    top: 130%;
-    width: 40px;
-    height: 40px;
+    top: 120%;
+    width: 4.8vh;
+    height: 4.8vh;
     background: rgb(220, 100, 100);
     animation: navbar_button 400ms 1200ms ease-in-out forwards;
     animation-direction: reverse;
@@ -131,20 +133,20 @@
 }
 @keyframes navbar_button {
     from {
-        top: 0;
-        width: 70px;
-        height: 70px;
+        top: 2px;
+        width: 8.5vh;
+        height: 8.5vh;
         background: linear-gradient(30deg, #0c1824, #00335e);
     } to {
-        top: 130%;
-        width: 40px;
-        height: 40px;
+        top: 120%;
+        width: 4.8vh;
+        height: 4.8vh;
         background: rgb(220, 100, 100);
     }
 }
 @keyframes navbar_option {
     from {
-        width: 60px;
+        width: 8.5vh;
         border-radius: 50%;
     } to {
         width: 100%;
@@ -157,7 +159,7 @@
         font-size: smaller;
     } to {
         opacity: 1;
-        font-size: large;
+        font-size: calc(0.8vw + 0.7vmin);
     }
 }
 @keyframes act0 {
