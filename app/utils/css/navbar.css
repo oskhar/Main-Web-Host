@@ -18,7 +18,7 @@
     border-radius: 50%;
     background: transparent;
     backdrop-filter: blur(15px);
-    border: 3px solid rgba(200, 200, 255, 0.2);
+    border: 2px solid rgba(200, 200, 255, 0.2);
     display: grid;
     grid-template-columns: auto auto auto;
 }
@@ -82,13 +82,57 @@
     animation: navbar_button 400ms 1200ms ease-in-out forwards;
     animation-direction: reverse;
 }
+#navbar .buka_navbar div {
+    height: 80%;
+    width: 16%;
+    position: absolute;
+    top: -10%;
+    background: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+#navbar .buka_navbar div:nth-child(1) {
+    left: 20%;
+}
+#navbar .buka_navbar div:nth-child(2) {
+    right: 20%;
+}
+#navbar #act01 {
+    top: -10%;
+    left: 20%;
+    transform: rotate(0deg);
+    animation: act0 400ms ease-in-out forwards;
+    animation-direction: normal;
+}
+#navbar #act11 {
+    top: -10%;
+    right: 20%;
+    transform: rotate(0deg);
+    animation: act1 400ms ease-in-out forwards;    animation-direction: normal;
+
+}
+#navbar #act02 {
+    top: 10%;
+    left: 42%;
+    transform: rotate(315deg);
+    animation: act0 400ms 1200ms ease-in-out forwards;
+    animation-direction: reverse;
+}
+#navbar #act12 {
+    top: 10%;
+    right: 42%;
+    transform: rotate(315deg);
+    animation: act1 400ms 1200ms ease-in-out forwards;
+    animation-direction: reverse;
+
+}
 @keyframes navbar_button {
-    0% {
+    from {
         top: 0;
         width: 70px;
         height: 70px;
         background: rgb(100, 100, 220);
-    } 100% {
+    } to {
         top: 90px;
         width: 40px;
         height: 40px;
@@ -96,20 +140,42 @@
     }
 }
 @keyframes navbar_option {
-    0% {
+    from {
         width: 60px;
         border-radius: 50%;
-    } 100% {
+    } to {
         width: calc(70vmin - 10px);
         border-radius: 20px;
     }
 }
 @keyframes navbar_font {
-    0% {
+    from {
         opacity: 0;
         font-size: smaller;
-    } 100% {
+    } to {
         opacity: 1;
         font-size: large;
+    }
+}
+@keyframes act0 {
+    from {
+        top: -10%;
+        left: 20%;
+        transform: rotate(0deg);
+    } to {
+        top: 10%;
+        left: 42%;
+        transform: rotate(315deg);
+    }
+}
+@keyframes act1 {
+    from {
+        top: -10%;
+        right: 20%;
+        transform: rotate(0deg);
+    } to {
+        top: 10%;
+        right: 42%;
+        transform: rotate(-315deg);
     }
 }

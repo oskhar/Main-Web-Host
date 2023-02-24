@@ -10,8 +10,8 @@ window.click_buka_navbar = function () {
             <button id="but` + navbar_click + `">Project</button>
         </div>
         <button class="buka_navbar" onclick="click_buka_navbar()" id="nav` + navbar_click + `">
-            <div></div>
-            <div></div>
+            <div id="act0` + navbar_click + `"></div>
+            <div id="act1` + navbar_click + `"></div>
         </button>
     `;
     navbar_click = navbar_click == 1 ? 2 : 1;
