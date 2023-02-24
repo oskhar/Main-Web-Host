@@ -1,6 +1,6 @@
 #navbar {
     position: absolute;
-    width: calc(30vw + 10vmin);
+    width: calc(4vw + 80vmin);
     height: 8.5vh;
     left: 0;
     right: 0;
@@ -40,19 +40,19 @@
     background: transparent;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: smaller;
+    font-size: 0.2vw;
     opacity: 0;
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
 }
 #navbar #but1 {
-    font-size: smaller;
+    font-size: 0.2vw;
     opacity: 0;
     animation: navbar_font 400ms 1200ms ease-in-out forwards;
     animation-direction: normal;
 }
 #navbar #but2 {
-    font-size: calc(0.8vw + 0.7vmin);
+    font-size: calc(0.4vw + 1.5vmin);
     opacity: 1;
     animation: navbar_font 400ms ease-in-out forwards;
     animation-direction: reverse;
@@ -65,7 +65,6 @@
     width: 8.5vh;
     height: 8.5vh;
     background: linear-gradient(30deg, #0c1824, #00335e);
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     margin: auto;
     border: none;
     border-radius: 50%;
@@ -75,6 +74,7 @@
     top: 2px;
     width: 8.5vh;
     height: 8.5vh;
+    box-shadow: none;
     background: linear-gradient(30deg, #0c1824, #00335e);
     animation: navbar_button 400ms ease-in-out forwards;
     animation-direction: normal;
@@ -83,6 +83,7 @@
     top: 120%;
     width: 4.8vh;
     height: 4.8vh;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     background: rgb(220, 100, 100);
     animation: navbar_button 400ms 1200ms ease-in-out forwards;
     animation-direction: reverse;
@@ -136,11 +137,13 @@
         top: 2px;
         width: 8.5vh;
         height: 8.5vh;
+        box-shadow: none;
         background: linear-gradient(30deg, #0c1824, #00335e);
     } to {
         top: 120%;
         width: 4.8vh;
         height: 4.8vh;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
         background: rgb(220, 100, 100);
     }
 }
@@ -156,10 +159,10 @@
 @keyframes navbar_font {
     from {
         opacity: 0;
-        font-size: smaller;
+        font-size: 0.2vw;
     } to {
         opacity: 1;
-        font-size: calc(0.8vw + 0.7vmin);
+        font-size: calc(0.4vw + 1.5vmin);
     }
 }
 @keyframes act0 {
