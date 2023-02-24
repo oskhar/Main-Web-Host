@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 9%;
+    bottom: 3.5vh;
     z-index: 8;
 }
 #navbar .option {
@@ -20,16 +20,19 @@
     background: transparent;
     backdrop-filter: blur(15px);
     border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
 #navbar #opt1 {
+    top: 0;
     width: 8.5vh;
     border-radius: 50%;
-    animation: navbar_option 800ms 400ms ease-in-out forwards;
+    animation: navbar_option 800ms ease-in-out forwards;
     animation-direction: normal;
 }
 #navbar #opt2 {
+    top: -60%;
     width: 100%;
     border-radius: 20px;
     animation: navbar_option 800ms 400ms ease-in-out forwards;
@@ -80,7 +83,7 @@
     animation-direction: normal;
 }
 #navbar #nav2 {
-    top: 120%;
+    top: 70%;
     width: 4.8vh;
     height: 4.8vh;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -93,7 +96,7 @@
     width: 16%;
     position: absolute;
     top: -10%;
-    background: white;
+    background: linear-gradient(to bottom, #9a9bf6, #00dde5);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
@@ -140,7 +143,7 @@
         box-shadow: none;
         background: linear-gradient(30deg, #0c1824, #00335e);
     } to {
-        top: 120%;
+        top: 70%;
         width: 4.8vh;
         height: 4.8vh;
         box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -148,10 +151,18 @@
     }
 }
 @keyframes navbar_option {
-    from {
+    0% {
+        top: 0;
         width: 8.5vh;
         border-radius: 50%;
-    } to {
+    }
+    50% {
+        top: -60%;
+        width: 8.5vh;
+        border-radius: 50%;
+    }
+    100% {
+        top: -60%;
         width: 100%;
         border-radius: 20px;
     }
