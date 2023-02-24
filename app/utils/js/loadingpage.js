@@ -975,8 +975,8 @@ var run = setInterval(loadingpage_animation, 150);
 
 // Delete loading
 window.addEventListener("DOMContentLoaded", function() {
-  // clearInterval(run);
-  // document.getElementById("loadingpage").remove();
+  clearInterval(run);
+  document.getElementById("loadingpage").remove();
 });
 
 // Mobile detector
