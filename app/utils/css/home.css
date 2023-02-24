@@ -1,6 +1,9 @@
 body {
     background: #0d1116;
 }
+#navbar {
+    bottom: 20%;
+}
 #darkplanet {
     left: 10%;
     top: 10%;

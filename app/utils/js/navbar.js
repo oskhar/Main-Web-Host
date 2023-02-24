@@ -8,6 +8,7 @@ window.click_buka_navbar = function () {
             <button id="but` + navbar_click + `">Home</button>
             <button id="but` + navbar_click + `">Contrib</button>
             <button id="but` + navbar_click + `">Project</button>
+            <button id="but` + navbar_click + `">Chat</button>
         </div>
         <button class="buka_navbar" onclick="click_buka_navbar()" id="nav` + navbar_click + `">
             <div id="act0` + navbar_click + `"></div>

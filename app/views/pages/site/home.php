@@ -10,5 +10,8 @@
         <section>
             <?php include($widgets."darkplanet.php") ?>
         </section>
+        <section>
+            <?php include($widgets."kontrolpesawat.php") ?>
+        </section>
     </body>
 </html>

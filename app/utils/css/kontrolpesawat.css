@@ -1,0 +1,19 @@
+#kontrolpesawat {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../../../assets/images/pesawat_luarangkasa.png');
+    background-size: 200% 200%;
+    background-position: center center;
+    z-index: 7;
+    animation: zoomin 1s ease-in-out forwards;
+}
+@keyframes zoomin {
+    from {
+        background-size: 200% 200%;
+    } to {
+        background-size: 100% 100%;
+    }
+}

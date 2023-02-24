@@ -5,7 +5,8 @@
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 5;
+    bottom: 8%;
+    z-index: 8;
 }
 #navbar .option {
     position: absolute;
@@ -18,9 +19,9 @@
     border-radius: 50%;
     background: transparent;
     backdrop-filter: blur(15px);
-    border: 2px solid rgba(200, 200, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
 }
 #navbar #opt1 {
     width: 60px;
@@ -40,7 +41,7 @@
     font-family: sans-serif;
     font-size: smaller;
     opacity: 0;
-    color: rgba(200, 200, 255, 0.7);
+    color: rgba(255, 255, 255, 1);
 }
 #navbar #but1 {
     font-size: smaller;
@@ -61,7 +62,8 @@
     top: 0;
     width: 70px;
     height: 70px;
-    background: rgb(100, 100, 220);
+    background: linear-gradient(30deg, #0c1824, #00335e);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
     margin: auto;
     border: none;
     border-radius: 50%;
@@ -70,12 +72,12 @@
     top: 0;
     width: 70px;
     height: 70px;
-    background: rgb(100, 100, 220);
+    background: linear-gradient(30deg, #0c1824, #00335e);
     animation: navbar_button 400ms ease-in-out forwards;
     animation-direction: normal;
 }
 #navbar #nav2 {
-    top: 90px;
+    top: 130%;
     width: 40px;
     height: 40px;
     background: rgb(220, 100, 100);
@@ -131,9 +133,9 @@
         top: 0;
         width: 70px;
         height: 70px;
-        background: rgb(100, 100, 220);
+        background: linear-gradient(30deg, #0c1824, #00335e);
     } to {
-        top: 90px;
+        top: 130%;
         width: 40px;
         height: 40px;
         background: rgb(220, 100, 100);

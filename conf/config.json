@@ -13,6 +13,12 @@
         "DB_NAME": "oskhar_official"
     },
 
+    "PROFILE": {
+        "NAMA": "Muhamad Oskhar Mubarok",
+        "FOTO": "assets/images/myLogo.ico",
+        "ISI": ""
+    },
+
     "IN_DEVELOPMENT": true
 
 }

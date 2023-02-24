@@ -7,6 +7,7 @@
         <button>Home</button>
         <button>Contrib</button>
         <button>Project</button>
+        <button>Chat</button>
     </div>
     <button class="buka_navbar" onclick="click_buka_navbar()">
         <div></div>
