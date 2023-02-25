@@ -18,8 +18,8 @@ main {
 }
 @keyframes meteoriq {
     from {
-        left: 110%;
+        transform: translate(0vw);
     } to {
-        left: -10%;
+        transform: translate(-100vw);
     }
 }
