@@ -1,10 +1,25 @@
 body {
     background: #0d1116;
 }
+main {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
 #navbar {
     bottom: 23%;
 }
 #darkplanet {
     left: 10%;
     top: 10%;
+}
+@keyframes meteoriq {
+    from {
+        left: 110%;
+    } to {
+        left: -10%;
+    }
 }

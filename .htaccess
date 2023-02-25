@@ -2,9 +2,10 @@
 
     RewriteEngine on
 
-    RewriteRule ^$ bundle.php?halaman=home [L]
-    RewriteRule ^index\.php$ bundle.php?halaman=home [L]
+    RewriteRule ^$ bundle.php?page=home [L]
+    RewriteRule ^index\.php$ bundle.php?page=home [L]
 
-    RewriteRule ^(.*)$ bundle.php?halaman=$1 [L]
+    RewriteRule ^(.*)\.php$ bundle.php?page=$1 [L]
+    RewriteRule ^(.*)$ bundle.php?page=$1 [L]
 
 </IfModule>

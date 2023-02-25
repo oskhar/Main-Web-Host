@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 3.5vh;
+    bottom: 6vh;
     z-index: 8;
 }
 #navbar .option {
@@ -51,7 +51,7 @@
 #navbar #but1 {
     font-size: 0.2vw;
     opacity: 0;
-    animation: navbar_font 400ms 1200ms ease-in-out forwards;
+    animation: navbar_font 400ms 800ms ease-in-out forwards;
     animation-direction: normal;
 }
 #navbar #but2 {
@@ -88,7 +88,7 @@
     height: 4.8vh;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     background: rgb(220, 100, 100);
-    animation: navbar_button 400ms 1200ms ease-in-out forwards;
+    animation: navbar_button 400ms 800ms ease-in-out forwards;
     animation-direction: reverse;
 }
 #navbar .buka_navbar div {
@@ -124,14 +124,14 @@
     top: 15%;
     left: 42%;
     transform: rotate(315deg);
-    animation: act0 400ms 1200ms ease-in-out forwards;
+    animation: act0 400ms 800ms ease-in-out forwards;
     animation-direction: reverse;
 }
 #navbar #act12 {
     top: 15%;
     right: 42%;
     transform: rotate(-315deg);
-    animation: act1 400ms 1200ms ease-in-out forwards;
+    animation: act1 400ms 800ms ease-in-out forwards;
     animation-direction: reverse;
 
 }
