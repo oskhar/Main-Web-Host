@@ -14,6 +14,9 @@
             <section>
                 <?php include($widgets."kontrolpesawat.php") ?>
             </section>
+            <section>
+                <?php include($widgets."cardglass.php") ?>
+            </section>
         </main>
     </body>
     <script src="<?= $js ?><?= $nameFile ?>.js"></script>
